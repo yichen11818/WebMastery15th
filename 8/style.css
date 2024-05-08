@@ -1,0 +1,34 @@
+<!--并集选择器-->
+html,body,h4,p{
+	padding:0;
+	margin:0;
+	text-align: center;
+	font-size: 16px;
+}
+header,footer{
+	height: 25px;
+}
+
+.main{
+	border-top: 1px solid #ccc;
+	border-bottom:1px solid #cccs ;
+	padding:0 100px;
+}
+.left{
+	background: #eee;
+	width: 100px;
+	position: absolute;
+	left: 0;
+}
+.middle{
+	background: #ddd;
+}
+.right{
+	background: #eee;
+	width: 100px;
+	position: absolute;
+	 right: 0;
+}
+.left,.right,.middle{
+	height:199px;
+}

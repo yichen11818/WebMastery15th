@@ -1,0 +1,156 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #ffd333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+}
+.container {
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+}
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+/* 其他CSS代码保持不变 */
+
+nav a {
+color: rgba(22, 22, 107, 0.929); /* 默认颜色为深蓝色 */
+text-decoration: none;
+font-weight: bold;
+}
+
+nav a:hover {
+color: red; /* 鼠标悬停时的颜色为红色 */
+}
+
+nav a:active {
+color: rgb(25, 56, 235); /* 链接被点击时的颜色为蓝色 */
+}
+
+
+/* ...其他CSS代码保持不变... */
+main {
+    margin: 20px 0;
+}
+main h2 {
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+main p {
+    line-height: 1.6;
+    text-indent: 2em;
+}
+
+@media (max-width: 768px) {
+.container {
+width: 95%;
+}
+nav ul li {
+display: block;
+margin-bottom: 10px;
+}
+}
+.content.hidden {
+    display: none;
+}
+
+.content.visible {
+    display: block;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* 设置图片间的间距 */
+    justify-content: center; /* 图片居中对齐 */
+}
+
+.image-gallery img {
+    width: calc(33.333% - 0.5rem); /* 每张图片占容器的1/3减去一半的间隙，以保证整体布局的对齐 */
+    height: auto; /* 保持图片的宽高比 */
+    object-fit: cover; /* 保证图片填充容器同时不失真 */
+}
+
+#aboutContent {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#aboutContent h2 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#aboutContent p {
+    line-height: 1.6;
+    color: #555;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #FF6F61;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    #aboutContent {
+        padding: 20px;
+    }
+    
+    #aboutContent h2 {
+        font-size: 2em;
+    }
+    
+    #aboutContent p {
+        font-size: 1em;
+    }
+}
+
+#backToTop {
+    display: none; /* 默认隐藏 */
+    position: fixed; /* 固定位置 */
+    bottom: 20px; /* 距离底部的距离 */
+    right: 20px; /* 距离右侧的距离 */
+    z-index: 99; /* 确保按钮在最上层 */
+    border: none;
+    outline: none;
+    background-color: #a3a39a;
+    color: rgb(42, 85, 141);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    opacity: 0.7; /* 设置透明度 */
+    transition: 0.4s; /* 平滑过渡效果 */
+}
+
+#backToTop:hover {
+    background-color: #555; /* 鼠标悬停时改变背景色 */
+    color: white; /* 文字颜色 */
+}
+
+

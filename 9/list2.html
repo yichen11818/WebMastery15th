@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/jquery-3.6.0.js"></script>
+	<script>
+		$(function(){
+			var flag = true;
+			$(".sp2").click(function(){
+				if(flag){
+					$(this).siblings(".sp1").css("display","block");
+					flag = false;
+				}else{
+					$(this).siblings(".sp1").css("display","none");
+					flag = true;
+				}
+			})
+		})
+	</script>
+	<title>品牌人物</title>
+</head>
+<body>
+	<ul class="top1 auto clearfix">
+		<li><a href="./index.html">首页</a></li>
+		<li><a href="./list2.html">品牌人物</a></li>
+		<li><a href="./list3.html">品牌故事</a></li>
+		<li><a href="">品牌热点</a></li>
+	</ul>
+	<div class="banner auto">
+		<img src="./images/1.jpg" alt="">
+	</div>
+	<div class="ch2 auto">
+		<h2><span class="sp2">品牌人物</span><span class="sp1"></span><span class="sp1"></span></h2>
+	</div>
+	<div class="main2 auto">
+		<div>
+			<img src="./images/3.jpg" alt="">
+			<p>郎志正&nbsp;</p>
+			<p>国际质量科学院院士、中国合格评定国家认可委员会副主任、国务院原参事</p>
+		</div>
+		<div>
+			<img src="./images/4.jpg" alt="">
+			<p>撒贝宁</p>
+			<p>春晚、法制节目、科教节目……2019年，“名嘴”撒贝宁几乎霸屏央视的“黄金档”。他跨界娱乐圈“放飞自我”，以“行走的段子手”形象圈粉无数，用庄谐并重的形象持续为观众呈现积极向上的价值观。</p>
+		</div>
+		<div>
+			<img src="./images/5.jpg" alt="">
+		  <p>陈耀华</p>
+			<p>广设协百色分会会员 、广西科技馆电脑设计3Dmax设计培训优秀讲师、 2020年度中国国际设计周（百色区）十佳品牌设计人物</p>
+		</div>
+	</div>
+	<div class="footer auto">
+		
+	</div>
+</body>
+</html>

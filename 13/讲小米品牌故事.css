@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 16px;
+}
+.logo{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+.logo h4{
+    cursor: pointer;
+    font-size: 35px;
+    letter-spacing: 2px;
+    margin:20px 0 5px 0;
+}
+.logo h4:hover{
+    color: #ce8460;
+}
+.logo p{
+    font-size: 16px;
+
+}
+.nav{
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.nav ul {
+    display: flex;
+    justify-content: center;
+   padding: 10px 0;
+}
+.nav ul li{
+    list-style: none;
+    width: 200px;
+
+}
+.nav ul li a{
+    color: #333;
+    text-decoration: none;
+}
+.nav ul li a:hover{
+    color: #ce8460;
+}
+.banner{
+    width: 820px;
+    margin: 20px auto;
+}
+.banner img{
+    width: 100%;
+}
+.about{
+    width:  820px;
+    margin: auto;
+}
+.about h3{
+    display: flex;
+    align-items: center;
+    color: #ce8460;
+    font-size: 24px;
+}
+.about h3::before{
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 25px;
+    margin-right: 10px;
+    background: #ce8460;
+}
+.about p{
+    line-height: 1.8;
+    margin: 20px 0;
+    text-indent: 2em;
+    color: red;
+}
+.video{
+    
+    margin: 20px 0;
+}
+.full{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.footer{
+    background: #333;
+    width: 100%;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+    
+
+    
+
+    
+
+    
+    
+
+

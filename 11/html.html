@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>展现企业精神：用网事精神</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>展现企业精神：用网事精神</h1>
+    </header>
+    <div class="container">
+        <p>在今天的竞争激烈的商业环境中，企业精神至关重要。本网页旨在探讨如何通过网事精神来展现企业的价值观和文化。</p>
+        <button id="inspireBtn">获取鼓舞人心的格言</button>
+        <p id="inspiration"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#inspiration {
+    font-style: italic;
+    margin-top: 20px;
+}
+document.getElementById('inspireBtn').addEventListener('click', function() {
+    const inspirations = [
+        "团结协作，共创辉煌。",
+        "勇于创新，持续进取。",
+        "诚信为本，客户至上。",
+        "责任担当，永无止境。",
+        "困难面前，永不放弃。",
+        "努力奋斗，追求卓越。"
+    ];
+    const randomIndex = Math.floor(Math.random() * inspirations.length);
+    const inspiration = inspirations[randomIndex];
+    document.getElementById('inspiration').textContent = inspiration;
+});

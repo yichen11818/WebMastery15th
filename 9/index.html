@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/jquery-3.6.0.js"></script>
+	<script>
+		$(function(){
+			function carousel(stop_time) {
+			var $carousel = $('.carousel > .carousel-inner > .item'); // 轮播内容
+			var length = $carousel.length - 1; // 从0开始
+			var next = 0;
+			var prev = 0;
+			var $sort = $('.carousel > .carousel-sort > .item'); // 当前进度
+
+			// 获取当前的active
+			function current_active() {
+				for (var i = 0; i < $carousel.length; i++) {
+					if ($($carousel[i]).hasClass('active')) {
+						return i
+					}
+				}
+			}
+
+			// 添加active
+			function add_active(next) {
+				$($carousel[next]).addClass('active');
+				$($sort[next]).addClass('active');
+			}
+
+			// 移除active
+			function remove_active(prev) {
+				$($carousel[prev]).removeClass('active');
+				$($sort[prev]).removeClass('active');
+			}
+
+			// 下一张
+			function run_next(num) {
+				next += num;
+				if (next > length) {
+					next = 0;
+				}
+				return next
+			}
+
+			// 上一张
+			function run_prev(num) {
+				prev = next - num;
+				if (prev < 0) {
+					prev = length
+				}
+				return prev
+			}
+
+			// 根据时间，自动切换
+			function run_carousel() {
+				add_active(run_next(1));
+				remove_active(run_prev(1));
+			}
+
+			// 定时
+			var interval = null;
+
+			function run_interval() {
+				interval = setInterval(run_carousel, stop_time)
+			}
+
+			function stop_interval() {
+				clearInterval(interval)
+			}
+			run_interval();
+
+			// 切换进度
+			$($sort).click(function() {
+				stop_interval();
+				remove_active(current_active());
+				add_active($(this).index());
+				run_interval()
+			});
+
+			// 鼠标悬停
+			var mouse_tar = $($carousel).parent();
+			$(mouse_tar).mouseenter(function() {
+				stop_interval()
+			});
+			$(mouse_tar).mouseleave(function() {
+				run_interval()
+			});
+
+			// 左右切换
+			$('.carousel-left').click(function() {
+				stop_interval();
+				remove_active(current_active());
+				var prev = run_prev(1);
+				add_active(prev);
+				next = prev;
+				run_interval()
+			});
+			$('.carousel-right').click(function() {
+				stop_interval();
+				remove_active(current_active());
+				add_active(run_next(1));
+				run_interval()
+			})
+		}
+	// 每次更换内容的时间
+	carousel(3000)
+		$(".oli").hover(function(){
+			$(this).children(".cul").slideToggle(50);
+		})
+	})
+		
+	</script>
+	<title>品牌</title>
+</head>
+<body>
+	<ul class="top1 auto clearfix">
+		<li><a href="./index.html">首页</a></li>
+		<li class="oli">
+			<a href="./list2.html">品牌人物</a>
+			<ul class="cul">
+				<li><a href="">中国品牌人物</a></li>
+				<li><a href="">外国品牌人物</a></li>
+			</ul>
+		</li>
+		<li><a href="./list3.html">品牌故事</a></li>
+		<li><a href="">品牌热点</a></li>
+	</ul>
+	<div class="carousel">
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="./images/1.jpg">
+			</div>
+			<div class="item">
+				<img src="./images/11.jpg">
+			</div>
+			<div class="item">
+				<img src="./images/12.jpg">
+			</div>
+			<div class="item">
+				<img src="./images/13.jpg">
+			</div>
+			<div class="item">
+				<img src="./images/14.jpg">
+			</div>
+		</div>
+		<ul class="carousel-sort">
+			<li class="item active"></li>
+			<li class="item"></li>
+			<li class="item"></li>
+			<li class="item"></li>
+			<li class="item"></li>
+		</ul>
+		<div class="carousel-left"></div>
+		<div class="carousel-right"></div>
+	</div>
+	<div class="main1 auto clearfix">
+		<div class="main1-l">
+			<h1>
+				中国品牌日
+		  </h1>
+			<h4>品牌&nbsp;</h4>
+			<div class="con1">
+				<img src="./images/2.jpg" alt="">
+				<p>
+					　品牌是生产者和消费者共同的追求，是供给侧和需求侧升级的方向，是企业乃至国家综合竞争力的重要体现。加强品牌建设，有利于推动经济大国向经济强国转变，有利于满足人们更高层次物质文化需求，有利于弘扬中华文化、提升中国形象。发展品牌经济，就是以新发展理念为指导，全面改善影响品牌发展的质量、创新、诚信、文化、人才、营销和环境等要素，推动产业结构调整，促进经济转型升级，为实现中华民族伟大复兴的中国梦奠定更加坚实的基础。
+				</p>
+			</div>
+		</div>
+		<div class="main1-r">
+			<h3>品牌日的意义&nbsp;</h3>
+			<p>
+中国品牌日的意义是发挥品牌引领作用，推动供给结构和需求结构升级，有利于激发企业创新创造活力，促进生产要素合理配置，提高全要素生产率，提升产品品质，实现价值链升级，增加有效供给，提高供给体系的质量和效率；有利于引领消费，创造新需求，树立自主品牌消费信心，挖掘消费潜力，更好发挥需求对经济增长的拉动作用，满足人们更高层次的物质文化需求；有利于促进企业诚实守信，强化企业环境保护、资源节约、公益慈善等社会责任，实现更加和谐、更加公平、更可持续的发展。			</p>
+			<ul>
+			  <li>→广东馆</li>
+				<li>→贵州馆</li>
+				<li>→河南馆</li>
+				<li>→重庆馆</li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer auto">
+		
+	</div>
+</body>
+</html>

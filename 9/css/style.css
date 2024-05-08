@@ -1,0 +1,270 @@
+html{
+	font-family: "microsoft yahei,arial, helvetica, sans-serif";
+	font-size: 16px;
+}
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+.auto{
+	margin: 0 auto;
+}
+.clearfix::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.top1{
+	width: 1200px;
+	height: 50px;
+	background-color: seagreen;
+}
+.top1>li{
+	width: 150px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	float: left;
+	position: relative;
+}
+.top1>li a{
+	color: #fff;
+	display: block;
+}
+.cul{
+	position: absolute;
+	left: 0;
+	top: 50px;
+	width: 150px;
+	height: 100px;
+	background-color: burlywood;
+	display: none;
+	z-index: 9999;
+}
+.cul li{
+	width: 150px;
+	height: 50px;
+	border-bottom: 1px dashed #000;
+}
+.carousel {
+	position:relative;
+    margin: 0 auto 0;
+	height:500px;
+	width:1200px;
+	overflow:hidden;
+}
+.carousel-inner {
+	position:relative;
+}
+.carousel-inner .item {
+	opacity:0;
+	z-index:1;
+	position:absolute;
+    width: 1200px;
+    height: 500px;
+	top:0;
+	left:0;
+}
+.carousel-inner .item.active {
+	opacity:1;
+	transition:opacity .5s;
+	z-index:5;
+}
+.carousel-inner .item > img {
+	width:100%;
+	height:100%;
+}
+.carousel-sort {
+	list-style:none;
+	padding:0;
+	position:absolute;
+	bottom:10px;
+	z-index:10;
+	left:50%;
+	transform:translateX(-50%);
+}
+.carousel-sort .item {
+	cursor:pointer;
+	padding:4px 20px;
+	margin-right:5px;
+	float:left;
+	border:1px solid black;
+	background-color:#b0b0b0;
+}
+.carousel-sort .item.active {
+	background-color:#f5f5f5;
+}
+.carousel-left,.carousel-right {
+	position:absolute;
+	left:0;
+	top:50%;
+	transform:translateY(-50%);
+	width:40px;
+	height:70px;
+	z-index:15;
+	text-align:center;
+	cursor:pointer;
+	background:url("https://images.cnblogs.com/cnblogs_com/py-peng/1647393/o_200322083251direction.png") no-repeat -84px;
+}
+.carousel-left:hover {
+	background-position:0;
+}
+.carousel-right {
+	left:auto;
+	right:0;
+	background-position:-124px;
+}
+.carousel-right:hover {
+	background-position:-42px;
+}
+.banner,.banner img{
+	width: 1200px;
+	height: 500px;
+}
+.main1{
+	width: 1000px;
+	margin: 30px auto;
+}
+.main1-l{
+	width: 650px;
+	float: left;
+}
+.main1-l h1{
+	color: #666;
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+.main1-l h4{
+	color: #666;
+	font-weight: 400;
+	margin-bottom: 15px;
+}
+.con1 img{
+	width: 650px;
+}
+.con1 p{
+	color: #666;
+	margin-top: 15px;
+	text-indent: 2em;
+}
+.main1-r {
+	width: 320px;
+	float: right;
+}
+.main1-r h3{
+	color: #666;
+	margin-bottom: 20px;
+	font-weight: 400;
+}
+.main1-r p{
+	color: #666;
+	margin-bottom: 15px;
+}
+.main1-r li{
+	color: deepskyblue;
+	line-height: 30px;
+	cursor: pointer;
+}
+.ch2{
+	width: 1200px;
+	margin: 30px auto;
+	height: 30px;
+}
+.ch2 h2{
+	font-size: 26px;
+	color: #555;
+	font-weight: 400;
+}
+.ch2 span{
+	display: block;
+	width: 150px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	float: left;
+	font-weight: 500;
+	cursor: pointer;
+	user-select: none;
+}
+.ch2 .sp1{
+	display: none;
+}
+.ch2 .sp1:hover{
+	color: deepskyblue;
+}
+.main2{
+	width: 1000px;
+	margin: 40px auto;
+	display: flex;
+	justify-content: space-between;
+}
+.main2 div{
+	width: 313px;
+	height: 350px;
+}
+.main2 div img{
+	width: 313px;
+	height: 210px;
+}
+.main2 div p:nth-of-type(1){
+	font-size: 18px;
+	color: #333;
+	margin: 20px 0 12px;
+}
+.main2 div p:nth-of-type(2){
+	font-size: 14px;
+	color: #888;
+}
+.main3{
+	width: 1000px;
+	margin: 30px auto;
+}
+.main3 div:first-child{
+	width: 400px;
+	height: 280px;
+	float: left;
+}
+.main3 div:first-child img{
+	width: 400px;
+	height: 280px;
+}
+.main3 div:last-child{
+	width: 550px;
+	float: right;
+}
+.main3 div:last-child p{
+	color: #666;
+	margin-top: 20px;
+	line-height: 40px;
+}
+.main4{
+	width: 1000px;
+	margin: 40px auto
+}
+.main4 p{
+	text-indent: 2em;
+	color: #666;
+	line-height: 35px;
+	margin-bottom: 15px;
+}
+.main4 img{
+	width: 400px;
+	height: 300px;
+	border-radius: 10px;
+	float: right;
+	margin: 15px;
+}
+.footer{
+	width: 1200px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	background-color: seagreen;
+	color: #fff;
+}

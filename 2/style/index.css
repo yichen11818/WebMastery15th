@@ -1,0 +1,172 @@
+body {  
+    font-family: Arial, sans-serif;  
+    margin: 0;  
+    padding: 0;  
+}  
+  
+.container {  
+    max-width: 1200px;  
+    margin: 0 auto;  
+    padding: 20px;  
+}  
+  
+/* 头部样式 */  
+/* header {  
+    background-color: #f2f2f2;  
+}  
+  
+header h1 {  
+    margin: 0;  
+    text-align: center;  
+}   */
+  
+main nav ul {  
+    list-style-type: none;  
+    margin-left: 160px;  
+    padding: 10px;  
+    display: flex;  
+    justify-content: left;  
+    align-items: left;  
+    height: 30px;  
+}  
+  
+main nav ul li {  
+    margin: 0 10px;  
+}  
+  
+main nav ul li a {  
+    text-decoration: none;  
+    color: black;  
+    font-size: 16px;  
+    padding: 20px;  
+    transition: background-color 0.3s ease;  
+}  
+  
+.a:hover {  
+    background-color: #ddd; 
+    color: green; /* 鼠标悬停时超链接颜色变红 */
+    border-bottom: 4px solid green; /* 更粗的下边框 */
+}  
+footer div p span a {  
+    text-decoration: none;  
+    color: black;  
+    font-size: 16px;  
+    padding: 20px;  
+    transition: background-color 0.3s ease;  
+}
+main section div div img {
+    width: 1280px;
+}
+main section div ul {
+    padding-top: 50px;
+}
+/* 主内容样式 */  
+main {  
+    padding-top: 10px;  
+}  
+  
+/* 页脚样式 */  
+footer {  
+    background-color: #f2f2f2;  
+    text-align: center;  
+    padding: 20px 0;  
+}  
+  
+/* 响应式媒体查询 */  
+@media (max-width: 768px) {  
+    header nav ul {  
+        flex-direction: column;  
+        align-items: flex-start;  
+    }  
+  
+    header nav ul li {  
+        margin: 5px 0;  
+    }  
+}
+
+/* 1. 样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+
+/* 外层盒子样式,左右箭头和小圆点都要采用绝对定位，所以其父盒子要采用相对定位*/
+.banners {
+    position: relative;
+    overflow: hidden;
+    width: 1220px;
+    height: 480px;
+    margin: 10px auto;
+}
+/*滚动区 包裹所有图片的盒子 宽度要足够宽可以放下所有的图片*/
+.images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 700%;
+}
+/* 对图片使用浮动 使其排列在一行*/
+.images li{
+    float: left;
+}
+/* 图片大小会撑大盒子,设置图片大小 */
+.banners img {
+    width: 1220px;
+    height: 480px;
+}
+/*左右箭头相同样式*/
+.prev,
+.next {
+    display: none;
+    position: absolute;  
+    /* 绝对定位的盒子垂直居中 */
+    top: 50%;
+    margin-top: -15px;
+    width: 20px;
+    height: 30px;
+    background: rgba(0,0,0, .3);
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    text-decoration: none; 
+}
+/*左箭头靠左定位*/
+.prev {
+    left: 0;
+     /* 设置圆角 */
+     border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+/*右箭头靠右定位*/
+.next {
+    right: 0;
+    /* 设置圆角 */
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+/* 小圆点外层盒子的样式 */
+.dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -35px;
+    height: 13px;
+    background:rgba(255,255,255, .3);
+    border-radius:7px;
+}
+/* 小圆点样式*/
+.dots li {
+    float: left;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 3px;
+}
+/* 小圆点被点击的样式 */
+.dots .active {
+    background-color: #ff5000;
+}
